@@ -1,0 +1,11 @@
+<h1>Liste des patients</h1>
+<a href="{% url 'add_patient' %}">Ajouter un patient</a>
+<ul>
+    {% for patient in patients %}
+        <li>{{ patient.nom }} {{ patient.prenom }} ({{ patient.age }} ans)</li>
+    {% endfor %}
+    <div class="text-center mt-4">
+        <a href="{% url 'model_results_view' %}" class="btn btn-secondary">readmission</a>
+    </div>
+</ul>
+
